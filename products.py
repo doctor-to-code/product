@@ -8,3 +8,6 @@ while True:
 	location = input('請輸入購買地點')
 	products.append([name, price, date, location])
 print(products)
+
+for p in products:
+	print(p[2]) #p[2]就是指date，當我們想要提取清單中特定的欄位時可以使用的方式
