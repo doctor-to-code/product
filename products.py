@@ -6,10 +6,5 @@ while True:
 	price = input('請輸入價格')
 	date = input('請輸入購買日期')
 	location = input('請輸入購買地點')
-	p = []
-	p.append(name)
-	p.append(price)
-	p.append(date)
-	p.append(location)
-	products.append(p)
+	products.append([name, price, date, location])
 print(products)
