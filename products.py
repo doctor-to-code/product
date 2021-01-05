@@ -1,12 +1,16 @@
-#讀取檔案
+import os#載入作業系統os
 products = []
-with open('products.csv', 'r', encoding='Big5') as f:
-	for line in f:
-		if '商品,價格,購買日期,購買地點' in line:
-			continue #繼續(continue和break不同之處在於continue只是跳過該階段而非離開迴圈loop)
-		name, price, date, location = line.strip().split(',')
-		products.append([name, price, date, location])
-print(products)
+if os.path.isfile('products.csv'):
+	print('access permission')
+	with open('products.csv', 'r', encoding='Big5') as f:
+		for line in f:
+			if '商品,價格,購買日期,購買地點' in line:
+				continue #繼續(continue和break不同之處在於continue只是跳過該階段而非離開迴圈loop)
+			name, price, date, location = line.strip().split(',')
+			products.append([name, price, date, location])
+	print(products)
+else:
+	print('access fail due to no file existence')
 
 #讓使用者輸入
 while True:
