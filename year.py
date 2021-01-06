@@ -8,7 +8,7 @@ def is_leap(year):
 	else:
 		return True
 
-y = is_leap(2014)
+y = is_leap(2016)
 if y == False:
 	print('平年')
 else:
